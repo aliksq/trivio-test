@@ -60,6 +60,7 @@ body{
 
 }
 .logo{
+	margin-right: 80px;
 }
 @media (max-width: 1100px) {
 	.logo{
@@ -263,4 +264,11 @@ body{
 }
 .profile__logout {
 	font-weight: 700;
+}
+
+.text__block{
+	font-size: 26px;
+	margin: 0 auto;
+	line-height: 170%;
+	letter-spacing: .2rem;
 }
