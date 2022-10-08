@@ -1,0 +1,266 @@
+
+body{
+	font-family: 'Mulish', sans-serif;
+}
+/*-------------------------------WRAPPER-------------------------------*/
+.wrapper{
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.main{
+	flex: 1 1 auto;
+}
+/*-------------------------------CONTAINER-------------------------------*/
+[class*="__container"]{
+	margin: 0 auto;
+	padding: 30px 30px;
+}
+@media (max-width: 1400px) {
+	[class*="__container"] {
+		max-width: 1320px;
+	}
+}
+@media (max-width: 1200px) {
+	[class*="__container"] {
+		max-width: 1140px;
+	}
+}
+@media (max-width: 992px) {
+	[class*="__container"] {
+		max-width: 960px;
+	}
+}
+@media (max-width: 768px) {
+	[class*="__container"] {
+		max-width: 720px;
+	}
+}
+@media (max-width: 576px) {
+	[class*="__container"] {
+		max-width: 100%;
+		padding: 30px 15px;
+	}
+}
+/*-------------------------------HEADER-------------------------------*/
+.header{
+	
+}
+.header__container{
+	box-shadow: 0 1px 3px #d3d3d3;
+	position: relative;
+}
+.header__menu{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+@media (max-width: 576px) {
+
+}
+.logo{
+}
+@media (max-width: 1100px) {
+	.logo{
+		margin-right: 40px;
+	}
+}
+@media (max-width: 576px) {
+	.logo{
+		margin-right: 5px;
+	}
+}
+.logo img{
+	max-width: 6rem;
+}
+@media (max-width: 576px) {
+	.logo img{
+		max-width: 4rem;
+	}
+}
+.menu__body{
+	display: flex;
+	align-items: center;
+	gap: 400px;
+	flex: 1 0 auto;
+}
+@media (max-width: 1400px) {
+	.menu__body{
+		gap: 350px;
+	}
+}
+@media (max-width: 1300px) {
+	.menu__body{
+		gap: 250px;
+	}
+}
+@media (max-width: 1200px) {
+	.menu__body{
+		gap: 150px;
+	}
+}
+@media (max-width: 1100px) {
+	.menu__body{
+		gap: 40px;
+	}
+}
+@media (max-width: 992px) {
+	.menu__body{
+		flex-direction: column;
+		gap: 70px;
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: #407bf7;
+		padding: 80px 15px;
+		transition: left 0.3s ease 0s;
+	}
+	.header:target .menu__body{
+		left: 0;
+	}
+
+	.s__list{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.s__link{
+		color: #fff;
+		font-size: 24px;
+	}
+}
+.s__list {
+	display: flex;
+	gap: 60px;
+}
+.s__item{
+	font-size: 16px;
+	font-weight: 600;
+}
+.p__list{
+	display: flex;
+	gap: 10px;
+}
+@media (max-width: 992px) {
+	.p__list{
+		flex: 1 0 auto;
+	}
+}
+.p__item{
+	background-color: #407bf7;
+	display: block;
+	width: 30px;
+	height: 30px;
+	padding: 5px;
+	font-size: 12px;
+	color: #fff;
+}
+@media (max-width: 576px) {
+	.p__item{
+		width: 20px;
+		height: 20px;
+		padding: 2px;
+		font-size: 10px;
+	}
+}
+.p__link{
+	color: #fff;
+
+}
+/*-------------------------------BURGER-------------------------------*/
+.close-icon-menu,
+.icon__menu{
+	display: none;
+}
+@media (max-width: 992px) {
+	.close-icon-menu,
+	.icon__menu{
+		display: flex;	
+		position: relative;
+		flex: 0 0 30px;
+		height: 18px;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.icon__menu::before,
+	.icon__menu::after{
+		content: "";
+		background-color: #000;
+		height: 2px;
+	}
+	.icon__menu span{
+		height: 2px;
+		background-color: #000;
+	}
+	.close-icon-menu{
+		display: none;
+	}
+
+	.close-icon-menu::before,
+	.close-icon-menu::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		background-color: #000;
+		height: 2px;
+	}
+	.close-icon-menu::before {
+		transform: rotate(45deg);
+	}
+	.close-icon-menu::after {
+		transform: rotate(-45deg);
+	}
+	.header:target .icon__menu{
+		display: none;
+	}
+	.header:target .close-icon-menu{
+		display: flex;
+	}
+}
+
+
+.profile__card{
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	top: 90px;
+	right: 30px;
+	width: 280px;
+	padding: 15px 0px 15px 12px;
+	border-radius: 3px;
+	box-shadow: 0px 1px 3px #d3d3d3;
+	background-color: white;
+}
+.profile__name {
+	font-weight: 700;
+	margin-bottom: 8px;
+}
+.profile__trivio {
+	color: #bdbdbd;
+	margin-bottom: 4px;
+}
+.profile__balance {
+	color: #bdbdbd;
+	margin-bottom: 4px;
+}
+.profile__debt {
+	color: #bdbdbd;
+	margin-bottom: 14px;
+}
+.profile__title {
+	margin-bottom: 10px;
+	font-weight: 700;
+}
+.profile__manage {
+	margin-bottom: 20px;
+	font-weight: 700;
+}
+.profile__logout {
+	font-weight: 700;
+}
